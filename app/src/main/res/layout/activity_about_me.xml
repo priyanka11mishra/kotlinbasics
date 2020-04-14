@@ -6,7 +6,7 @@
     <data>
         <variable
             name="myName"
-            type="com.example.diceapplication.myname" />
+            type="com.example.diceapplication.MyName" />
     </data>
 <LinearLayout
     android:orientation="vertical"

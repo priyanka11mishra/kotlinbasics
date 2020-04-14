@@ -13,18 +13,12 @@ import com.example.diceapplication.databinding.ActivityAboutMeBinding
 class AboutMeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAboutMeBinding
-    private val myName: myname = myname("Aleks Haecky")
-
+    private val myName: MyName = MyName("Aleks Haecky")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_about_me)
         binding=DataBindingUtil.setContentView(this,R.layout.activity_about_me)
-        //findViewById<Button>(R.id.done_button).setOnClickListener {
-            //addnickname(it)
-        //}
         binding.myName=myName
-
         binding.doneButton.setOnClickListener {
             addnickname(it)
         }
@@ -39,11 +33,6 @@ class AboutMeActivity : AppCompatActivity() {
             binding.textNick.visibility=View.VISIBLE
 
         }
-        //val editText=findViewById<EditText>(R.id.nickname);
-        //val nicktext=findViewByd<TextView>(R.id.text_nick)
-
-
-
 
         val imm=getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken,0)
