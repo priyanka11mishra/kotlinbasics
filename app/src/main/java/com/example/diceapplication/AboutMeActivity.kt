@@ -8,12 +8,10 @@ import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import com.example.diceapplication.databinding.ActivityAboutMeBinding
 
-
-
 class AboutMeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAboutMeBinding
-    private val myName: MyName = MyName("Aleks Haecky")
+    private val myName = MyName("Aleks Haecky")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +29,9 @@ class AboutMeActivity : AppCompatActivity() {
             binding.nickname.visibility=View.GONE
             binding.doneButton.visibility=View.GONE
             binding.textNick.visibility=View.VISIBLE
-
         }
 
         val imm=getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken,0)
-
     }
 }
