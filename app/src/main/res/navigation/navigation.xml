@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.diceapplication.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gamePFragment"
+            app:destination="@id/gamePFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_gamePFragment2"
+            app:destination="@id/gamePFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamePFragment"
+        android:name="com.example.diceapplication.GamePFragment"
+        android:label="fragment_game_p"
+        tools:layout="@layout/fragment_game_p" >
+        <action
+            android:id="@+id/action_gamePFragment_to_gameWin"
+            app:destination="@id/gameWin"
+            app:popUpTo="@id/gamePFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gamePFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/gamePFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWin"
+        android:name="com.example.diceapplication.GameWin"
+        android:label="fragment_game_win"
+        tools:layout="@layout/fragment_game_win" >
+        <action
+            android:id="@+id/action_gameWin_to_gamePFragment"
+            app:destination="@id/gamePFragment"
+            app:popUpTo="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.diceapplication.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_gamePFragment"
+            app:destination="@id/gamePFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <activity
+        android:id="@+id/aboutMeActivity"
+        android:name="com.example.diceapplication.AboutMeActivity"
+        android:label="AboutMeActivity" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.diceapplication.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

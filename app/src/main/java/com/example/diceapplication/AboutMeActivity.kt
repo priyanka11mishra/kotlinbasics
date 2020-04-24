@@ -7,6 +7,8 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import com.example.diceapplication.databinding.ActivityAboutMeBinding
+import kotlinx.android.synthetic.main.activity_about_me.*
+
 
 class AboutMeActivity : AppCompatActivity() {
 
